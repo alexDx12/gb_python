@@ -1,8 +1,3 @@
-
-# data = [(1, {"название": "компьютер", "цена": 20000, "количество": 5, "eд": "шт."}),
-#         (2, {"название": "принтер", "цена": 6000, "количество": 2, "eд": "шт."}),
-#         (3, {"название": "сканер", "цена": 2000, "количество": 7, "eд": "шт."})
-
 index = 1
 result = []
 spec = ["название", "цена", "количество", "ед"]
@@ -21,7 +16,7 @@ while True:
         else:
             item[spe] = user_data
 
-    result.append(tuple[index, item])
+    result.append(tuple([index, item]))
     index += 1
 
 res_dict = {}
@@ -34,6 +29,3 @@ for item in spec:
             res_dict[item] = [param[1].get(item)]
 
 print(res_dict)
-
-# помогите пожалуйста разобраться, при выполнении кода получаю ошибку: TypeError: There are no
-# type variables left in tuple...
